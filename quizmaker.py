@@ -151,7 +151,7 @@ def edit_set_two():
 	global current_question
 	clear()
 	print(EDITING+current_test)
-	print("Q"+current_question)
+	print("Q"+str(current_question))
 	q = input("Q: ")
 	a = input("A: ").lower()
 	QUESTION[int(current_question)-1]=q
@@ -163,11 +163,11 @@ def edit_set():
 	clear()
 	show_all_q()
 	try:
-		choice = input("Choose question number to edit: ")
+		choice = int(input("Choose question number to edit: "))
 		current_question = choice
 		edit_set_two()
 	except:
-		print("tried")
+		print(INVALID)
 	
 	
 def choose_test():
